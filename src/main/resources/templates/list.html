@@ -4,6 +4,8 @@
 </head>
 <body>
 
+    <!--displays the list options, using data from the "columnChoices" Hashmap passed in via the model as columns.
+    Line 21 in ListController.java file-->
     <div th:replace="fragments :: page-header"></div>
 
     <div class="container body-content">
@@ -11,6 +13,7 @@
         <h2>View All</h2>
         <ul>
             <li th:each="column : ${columns}">
+                <!-- (column=${column.key} - Thymeleaf will generate query paraments for URL based on the key/value pair given-->
                 <a th:href="@{/list/values(column=${column.key})}" th:text="${column.value}"></a>
             </li>
         </ul>

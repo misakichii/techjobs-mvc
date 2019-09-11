@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 /**
  * Created by LaunchCode
+ * This controller has (handler) method named index that displays the home page for the app. The controller renders the index.html template.
  */
 @Controller
 public class HomeController {
